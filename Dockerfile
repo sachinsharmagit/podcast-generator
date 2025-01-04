@@ -13,4 +13,6 @@ RUN chmod +x /usr/bin/feed.py
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+RUN git config --global --add safe.directory /github/worksapce
+
 ENTRYPOINT ["/entrypoint.sh"]
